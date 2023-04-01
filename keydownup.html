@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click</title>
+    <style>
+        body{
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(90, 245, 124);
+        }
+        #display{
+            background-color:white;
+            font-size: 80px;
+            height: fit-content;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <div id="display">Press Any Key</div>
+    </div>
+    <script>
+        let box1=document.getElementById("box1");
+        let display=document.getElementById("display");
+        document.addEventListener("keydown",function func(e){
+            display.style.color="red";
+            display.innerText=e.key +" is key Down";
+        });
+        document.addEventListener("keyup",function func(e){
+            display.style.color="red";
+            display.innerText=e.key +" is key Up";
+        });
+    </script>
+</body>
+</html>
